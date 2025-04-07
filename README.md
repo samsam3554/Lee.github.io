@@ -1,4 +1,3 @@
-
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -146,7 +145,7 @@
       <img src="profile.jpg" alt="Profile Picture">
       <div class="about-text">
         <h2>Who Am I</h2>
-        <p>안녕하세요, 저는 AI 개발자 BIN입니다. 다양한 프로젝트와 연구를 통해 발전하고 있습니다.</p>
+        <p>안녕하세요, 저는 AI 개발자 LEEHYUNBIN 입니다. 다양한 프로젝트와 연구를 통해 발전하고 있습니다.</p>
       </div>
     </section>
 
@@ -154,21 +153,36 @@
       <h2>Projects</h2>
       <div class="project-category">
         <h3>In College</h3>
-        <p>대학에서 수행한 프로젝트들.</p>
+        <p>대학에서 수행한 프로젝트</p>
+      </div>
+      <div>
+      - 충북 SK하이닉스 대학생 창업 챌린지 최우수 <a href="https://www.veritas-a.com/news/articleView.html?idxno=506513" target="_blank"> 관련 기사 (기사 글 보기)
       </div>
       <div class="project-category">
         <h3>In Outside</h3>
-        <p>대학 외부에서 진행한 프로젝트들.</p>
+        <p>대학 외부에서 진행한 프로젝트</p>
+      </div>
+      <div>
+      - 아이디어 공모전 <a href="https://velog.io/@samsam3554/%EC%9D%B5%EC%88%98%EC%9E%90%EB%A5%BC-%ED%8C%90%EB%B3%84%ED%95%98%EB%8A%94-AI-1" target="_blank"> 익수자를 판별하는 AI (Velog 글 보기) </a>
+      
       </div>
       <div class="project-category">
         <h3>Personal Project</h3>
-        <p>개인적으로 진행한 프로젝트들.</p>
+        <p>개인적으로 진행한 프로젝트</p>
+      </div>
+      <div>
+      - YOLO를 활용한 익수자 판별 Ai 시스템 구축 <a href="https://velog.io/@samsam3554/%EC%9D%B5%EC%88%98%EC%9E%90%EB%A5%BC-%ED%8C%90%EB%B3%84%ED%95%98%EB%8A%94-AI-1" target="_blank"> 익수자를 판별하는 AI (Velog 글 보기) </a>
+      - python 학습 블로그 운영<a href="https://velog.io/@samsam3554/자료형이-뭐야..1" target="_blank"> python studing history (Velog 글 보기) </a>
+      - DB 학습 블로그 운영 <a href="https://velog.io/@samsam3554/데이터베이스-기초-초보자를-위한-쉽게-풀어-쓴-이야기1" target="_blank"> DB studing history (Velog 글 보기) </a>
+      - programmers 문제 풀이 블로그 운영 <a href="" target="_blank"> programmers problem solving history (Velog 글 보기) </a>
+      -
+      -
+      
       </div>
     </section>
-
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: bin@example.com</p>
+      <p>Email: samsam3554@naver.com</p>
     </section>
   </main>
 
