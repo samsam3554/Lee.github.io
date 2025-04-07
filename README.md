@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BIN | Developer Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #000;
-      color: #FFF;
+      color: #fff;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -20,8 +19,8 @@
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 20px;
       background-color: #FF5733;
     }
@@ -34,11 +33,9 @@
     nav ul {
       list-style: none;
       display: flex;
+      gap: 20px;
       padding: 0;
-    }
-
-    nav li {
-      margin-left: 20px;
+      margin: 0;
     }
 
     nav a {
@@ -50,16 +47,15 @@
     main {
       flex: 1;
       padding: 40px;
-      background-color: #1C1C1C;
+      background-color: #1c1c1c;
     }
 
     section {
-      width: 80%;
-      margin: auto;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
       padding: 20px;
       background: #333;
       border-radius: 8px;
-      margin-bottom: 40px;
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.5s ease-in-out;
@@ -82,19 +78,22 @@
       flex: 1;
     }
 
-    .project-category {
-      width: 90%;
-      background: #444;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
+    .project-category h3 {
+      margin-top: 0;
+    }
+
+    .project-category ul {
+      padding-left: 20px;
+    }
+
+    .project-category li {
+      margin-bottom: 10px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       background-color: #333;
-      color: white;
     }
 
     a {
@@ -104,17 +103,18 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const sections = document.querySelectorAll("section");
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = 1;
             entry.target.style.transform = "translateY(0)";
           }
         });
       }, { threshold: 0.5 });
-      sections.forEach(section => observer.observe(section));
 
-      document.querySelectorAll("nav a").forEach(anchor => {
+      sections.forEach((section) => observer.observe(section));
+
+      document.querySelectorAll("nav a").forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
           const targetId = this.getAttribute("href").substring(1);
@@ -139,7 +139,7 @@
 
   <main>
     <section id="about">
-      <img src="profile.jpg" alt="Profile Picture">
+      <img src="profile.jpg" alt="Profile Picture" />
       <div class="about-text">
         <h2>Who Am I</h2>
         <p>안녕하세요, 저는 AI 개발자 LEEHYUNBIN 입니다. 다양한 프로젝트와 연구를 통해 발전하고 있습니다.</p>
@@ -153,8 +153,8 @@
         <h3>In College</h3>
         <ul>
           <li>
-            - 충북 SK하이닉스 대학생 창업 챌린지 최우수  
-            <a href="https://www.veritas-a.com/news/articleView.html?idxno=506513" target="_blank">관련 기사 (기사 글 보기)</a>
+            충북 SK하이닉스 대학생 창업 챌린지 최우수  
+            <a href="https://www.veritas-a.com/news/articleView.html?idxno=506513" target="_blank">[기사 보기]</a>
           </li>
         </ul>
       </div>
@@ -163,10 +163,8 @@
         <h3>In Outside</h3>
         <ul>
           <li>
-            - 아이디어 공모전  
-            <a href="https://velog.io/@samsam3554/%EC%9D%B5%EC%88%98%EC%9E%90%EB%A5%BC-%ED%8C%90%EB%B3%84%ED%95%98%EB%8A%94-AI-1" target="_blank">
-              익수자를 판별하는 AI (Velog 글 보기)
-            </a>
+            아이디어 공모전 - 익수자를 판별하는 AI  
+            <a href="https://velog.io/@samsam3554/익수자를-판별하는-AI-1" target="_blank">[Velog 글 보기]</a>
           </li>
         </ul>
       </div>
@@ -175,26 +173,20 @@
         <h3>Personal Project</h3>
         <ul>
           <li>
-            - YOLO를 활용한 익수자 판별 AI 시스템 구축  
-            <a href="https://velog.io/@samsam3554/%EC%9D%B5%EC%88%98%EC%9E%90%EB%A5%BC-%ED%8C%90%EB%B3%84%ED%95%98%EB%8A%94-AI-1" target="_blank">
-              익수자를 판별하는 AI (Velog 글 보기)
-            </a>
+            YOLO를 활용한 익수자 판별 시스템 구축  
+            <a href="https://velog.io/@samsam3554/익수자를-판별하는-AI-1" target="_blank">[Velog 글 보기]</a>
           </li>
           <li>
-            - Python 학습 블로그 운영  
-            <a href="https://velog.io/@samsam3554/자료형이-뭐야..1" target="_blank">
-              Python Studying History (Velog 글 보기)
-            </a>
+            Python 학습 블로그 운영  
+            <a href="https://velog.io/@samsam3554/자료형이-뭐야..1" target="_blank">[블로그 보기]</a>
           </li>
           <li>
-            - DB 학습 블로그 운영  
-            <a href="https://velog.io/@samsam3554/데이터베이스-기초-초보자를-위한-쉽게-풀어-쓴-이야기1" target="_blank">
-              DB Studying History (Velog 글 보기)
-            </a>
+            DB 학습 블로그 운영  
+            <a href="https://velog.io/@samsam3554/데이터베이스-기초-초보자를-위한-쉽게-풀어-쓴-이야기1" target="_blank">[블로그 보기]</a>
           </li>
           <li>
-            - Programmers 문제 풀이 블로그 운영  
-            <a href="#" target="_blank">Programmers Problem Solving History (Velog 글 보기)</a>
+            Programmers 문제 풀이 블로그 운영  
+            <a href="#" target="_blank">[블로그 보기]</a>
           </li>
         </ul>
       </div>
