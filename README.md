@@ -132,6 +132,7 @@
       <ul>
         <li><a href="#about">Who Am I</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#plans">Plans</a></li> <!-- 추가된 메뉴 -->
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -190,6 +191,17 @@
           </li>
         </ul>
       </div>
+    </section>
+
+    <section id="plans">
+      <h2>Plans</h2>
+      <ul>
+        <li>Jetson Nano 기반의 YOLOv8 실시간 감지 시스템 고도화</li>
+        <li>딥러닝 기반 영상 처리 기술 연구 및 논문 작성</li>
+        <li>다양한 공모전 및 해커톤 참여 계획</li>
+        <li>AI 기술을 활용한 사회적 문제 해결 프로젝트 추진</li>
+        <li>개발 역량 강화를 위한 오픈소스 프로젝트 기여</li>
+      </ul>
     </section>
 
     <section id="contact">
