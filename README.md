@@ -155,7 +155,7 @@
         <ul>
           <li>
             충북 SK하이닉스 대학생 창업 챌린지 최우수  
-            <a href="https://www.veritas-a.com/news/articleView.html?idxno=506513" target="_blank">[기사 보기]</a>
+            <a href="https://www.jbnews.com/news/articleView.html?idxno=1440228">[기사 보기]</a>
           </li>
         </ul>
       </div>
