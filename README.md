@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BIN | Developer Portfolio</title>
+  <meta charset="UTF-8">
+  <title>AI Developer Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: white;
     }
 
     header {
@@ -42,6 +36,13 @@
       color: white;
       text-decoration: none;
       font-size: 1.1em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     main {
@@ -59,6 +60,11 @@
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.5s ease-in-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     #about {
@@ -91,127 +97,103 @@
     }
 
     footer {
+      position: relative;
       text-align: center;
       padding: 20px;
       background-color: #333;
+    }
+
+    .visitor-counter {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #ccc;
     }
 
     a {
       color: #FF7043;
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll("section");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, { threshold: 0.5 });
-
-      sections.forEach((section) => observer.observe(section));
-
-      document.querySelectorAll("nav a").forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href").substring(1);
-          const targetSection = document.getElementById(targetId);
-          targetSection.scrollIntoView({ behavior: "smooth", block: "center" });
-        });
-      });
-    });
-  </script>
 </head>
 <body>
+
   <header>
-    <div class="logo">BIN</div>
+    <div class="logo">My Portfolio</div>
     <nav>
       <ul>
-        <li><a href="#about">Who Am I</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#plans">Plans</a></li> <!-- 추가된 메뉴 -->
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="about">
-      <img src="profile.jpg" alt="Profile Picture" />
+      <img src="https://via.placeholder.com/200" alt="Profile">
       <div class="about-text">
-        <h2>Who Am I</h2>
-        <p>안녕하세요, 저는 AI 개발자 LEEHYUNBIN 입니다. 다양한 프로젝트와 연구를 통해 발전하고 있습니다.</p>
+        <h2>About Me</h2>
+        <p>I want to be an AI developer. This is my personal portfolio website.</p>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="project-category">
       <h2>Projects</h2>
-
-      <div class="project-category">
-        <h3>In College</h3>
-        <ul>
-          <li>
-            충북 SK하이닉스 대학생 창업 챌린지 최우수  
-            <a href="https://www.jbnews.com/news/articleView.html?idxno=1440228">[기사 보기]</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-category">
-        <h3>In Outside</h3>
-        <ul>
-          <li>
-            아이디어 공모전 - 익수자를 판별하는 AI  
-            <a href="https://velog.io/@samsam3554/익수자를-판별하는-AI-1" target="_blank">[Velog 글 보기]</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-category">
-        <h3>Personal Project</h3>
-        <ul>
-          <li>
-            YOLO를 활용한 익수자 판별 시스템 구축  
-            <a href="https://velog.io/@samsam3554/익수자를-판별하는-AI-1" target="_blank">[Velog 글 보기]</a>
-          </li>
-          <li>
-            Python 학습 블로그 운영  
-            <a href="https://velog.io/@samsam3554/자료형이-뭐야..1" target="_blank">[블로그 보기]</a>
-          </li>
-          <li>
-            DB 학습 블로그 운영  
-            <a href="https://velog.io/@samsam3554/데이터베이스-기초-초보자를-위한-쉽게-풀어-쓴-이야기1" target="_blank">[블로그 보기]</a>
-          </li>
-          <li>
-            Programmers 문제 풀이 블로그 운영  
-            <a href="#" target="_blank">[블로그 보기]</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="plans">
-      <h2>Plans</h2>
+      <h3>AI Development</h3>
       <ul>
-        <li>Jetson Nano 기반의 YOLOv8 실시간 감지 시스템 고도화</li>
-        <li>딥러닝 기반 영상 처리 기술 연구 및 논문 작성</li>
-        <li>다양한 공모전 및 해커톤 참여 계획</li>
-        <li>AI 기술을 활용한 사회적 문제 해결 프로젝트 추진</li>
-        <li>개발 역량 강화를 위한 오픈소스 프로젝트 기여</li>
+        <li>YOLOv8-based Drowning Detection System</li>
+        <li>Real-time KakaoBot Alert Integration</li>
       </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: samsam3554@naver.com</p>
+      <p>Email: me@example.com</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 BIN. All Rights Reserved.</p>
+    &copy; 2025 My Portfolio
+    <div class="visitor-counter" id="visitorCount">
+      Visits: Loading...
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+          navLinks.forEach(l => l.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+
+      const sections = document.querySelectorAll("section");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.2 });
+
+      sections.forEach(section => observer.observe(section));
+
+      // 서버에서 방문자 수 가져오기
+      fetch("visitor_counter.php")
+        .then(response => response.text())
+        .then(count => {
+          document.getElementById("visitorCount").textContent = "Visits: " + count;
+        })
+        .catch(error => {
+          console.error("Error fetching visitor count:", error);
+          document.getElementById("visitorCount").textContent = "Visits: error";
+        });
+    });
+  </script>
+
 </body>
 </html>
