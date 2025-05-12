@@ -103,14 +103,6 @@
       background-color: #333;
     }
 
-    .visitor-counter {
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      font-size: 0.9em;
-      color: #ccc;
-    }
-
     a {
       color: #FF7043;
     }
@@ -155,9 +147,6 @@
 
   <footer>
     &copy; 2025 My Portfolio
-    <div class="visitor-counter" id="visitorCount">
-      Visits: Loading...
-    </div>
   </footer>
 
   <script>
@@ -181,17 +170,6 @@
       }, { threshold: 0.2 });
 
       sections.forEach(section => observer.observe(section));
-
-      // 서버에서 방문자 수 가져오기
-      fetch("visitor_counter.php")
-        .then(response => response.text())
-        .then(count => {
-          document.getElementById("visitorCount").textContent = "Visits: " + count;
-        })
-        .catch(error => {
-          console.error("Error fetching visitor count:", error);
-          document.getElementById("visitorCount").textContent = "Visits: error";
-        });
     });
   </script>
 
